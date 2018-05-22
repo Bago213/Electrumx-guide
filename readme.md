@@ -3,7 +3,7 @@
 ### 1.
 ```
 apt-get update \
-    && apt-get install -y cron build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils \
+    && apt-get install -y cron screen nano build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils \
     && apt-get install -y libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-all-dev software-properties-common  \
     && add-apt-repository -y ppa:bitcoin/bitcoin \
     && apt-get update \
