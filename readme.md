@@ -9,7 +9,6 @@ apt-get update \
     && apt-get update \
     && apt-get install -y libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev libqrencode-dev letsencrypt \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /ssl \
 ```
 
