@@ -30,7 +30,6 @@ apt-get update \
     && wget https://bootstrap.pypa.io/get-pip.py -O- | python3.6 \
     && pip install scrypt \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*  \
     && mkdir /log /db /env \
     && groupadd -r electrumx \
     && useradd -s /bin/bash -m -g electrumx electrumx \
