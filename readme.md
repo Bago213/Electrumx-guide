@@ -121,3 +121,8 @@ cron && tail -f /var/log/cron.log
 ```
 cp /env/* /home/electrumx/scripts/electrumx/env/ && svscan ~/service
 ```
+
+### 14. access logs.
+```
+tail -F /log/current | tai64nlocal
+```
