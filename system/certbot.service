@@ -1,0 +1,11 @@
+[Unit]
+Description=Let's Encrypt renewal
+Wants=certbot.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/certbot renew --quiet --agree-tos
+User=electrumx
+
+[Install]
+WantedBy=timers.target

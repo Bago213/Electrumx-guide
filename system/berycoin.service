@@ -1,0 +1,15 @@
+[Unit]
+Description=Berycoin
+After=network.target
+
+[Service]
+ExecStart=/home/electrumx/berycoin/src/berycoind -conf=/home/electrumx/.berycoin/berycoin.conf
+User=electrumx
+LimitNOFILE=8192
+TimeoutStopSec=30min
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
