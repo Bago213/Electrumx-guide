@@ -33,6 +33,7 @@ apt-get update \
     && mkdir /log /db /env \
     && groupadd -r electrumx \
     && useradd -s /bin/bash -m -g electrumx electrumx \
+    && sudo usermod -a -G sudo electrumx \
     && chown -R electrumx:electrumx /ssl \
     && cd /home/electrumx \
     && git clone https://github.com/berycoin-project/berycoin.git \
