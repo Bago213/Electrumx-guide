@@ -1,5 +1,6 @@
 ## Usage
 
+### 1.
 ```
 apt-get update \
     && apt-get install -y cron build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils \
@@ -12,11 +13,13 @@ apt-get update \
     && mkdir -p /ssl \
 ```
 
+### 2.
 ```
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /ssl/privkey.pem -out /ssl/cert.pem -subj /CN=electrum.berycoin.com \    
 
 ```
 
+### 3.
 ```
     add-apt-repository -y ppa:jonathonf/python-3.6 \
     && apt-get update \
@@ -44,22 +47,24 @@ apt-get update \
     && python3.6 setup.py install
 ```
 
+### 4.
 ```
 touch /var/log/cron.log \
     && chown -R electrumx:electrumx /var/log/cron.log
 ```
 
-
+### 5.
 ```
 passwd electrumx
 
 ```
 
-
+### 6.
 ```
 su electrumx
 ```
 
+### 7.
 ```
 cd /home/electrumx \
  && git clone https://github.com/Bago213/Electrumx-guide \
@@ -67,16 +72,23 @@ cd /home/electrumx \
  
 ```
 
+### 8.
 Edit `env/HOST` to your coin.
+
 Edit `env/REPORT_HOST` to your coin.
+
 Edit `env/DAEMON_URL` accordingly.Need to match your daemon.
+
 Edit `berycoin/berycoin.conf` accordingly.Need to match your RPCuser & RPCpassword in env/DAEMON_URL.
 
+
+### 9.
 ```
 cp -R env/* /env/ \
  && cp -R berycoin/* /home/electrumx/.berycoin/ 
 ```
 
+### 10.
 ```
 cd ~ \
     && cd /home/electrumx/berycoin \
@@ -96,14 +108,17 @@ cd ~ \
     && ln -s ~/scripts/electrumx  ~/service/electrumx
 ```
 
+### 11.
 ```
 cron && tail -f /var/log/cron.log
 ```
 
+### 12.
 ```
 /home/electrumx/berycoin/src/berycoind &
 ```
 
+### 13.
 ```
 cp /env/* /home/electrumx/scripts/electrumx/env/ && svscan ~/service
 ```
