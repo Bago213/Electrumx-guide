@@ -120,6 +120,8 @@ cron && tail -f /var/log/cron.log
 ### 13.
 ```
 cp /env/* /home/electrumx/scripts/electrumx/env/ && svscan ~/service
+
+svscan ~/service & disown
 ```
 
 ### 14. access logs.
