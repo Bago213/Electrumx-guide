@@ -126,3 +126,19 @@ cp /env/* /home/electrumx/scripts/electrumx/env/ && svscan ~/service
 ```
 tail -F /log/current | tai64nlocal
 ```
+
+### 15. terminate electrum
+```
+svc -d ~/service/electrumx
+```
+
+### 16. status electrum
+```
+svstat ~/service/electrumx
+```
+
+### 17. start electrum
+```
+svc -u ~/service/electrumx
+```
+
