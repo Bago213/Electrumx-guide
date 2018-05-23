@@ -91,7 +91,7 @@ cp -R env/* /env/ \
 ```
 cd ~ \
     && cd /home/electrumx/berycoin \
-    && git checkout 0.15 \
+    && git checkout 0.16 \
     && /home/electrumx/berycoin/autogen.sh \
     && /home/electrumx/berycoin/configure \
     && make -j4 \
